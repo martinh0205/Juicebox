@@ -1,6 +1,9 @@
+require("dotenv").config();
 const PORT = 3000;
 const express = require("express");
 const server = express();
+
+server.use(express.json());
 
 const { client } = require("./db");
 client.connect();
@@ -13,6 +16,7 @@ const apiRouter = require("./api");
 server.use("/api", apiRouter);
 
 const morgan = require("morgan");
+const { application } = require("express");
 server.use(morgan("dev"));
 
 server.use(express.json());
