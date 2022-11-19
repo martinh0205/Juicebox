@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js && node ./db/seed.js",
     "seed:dev": "nodemon ./db/seed.js",
     "seed": "node ./db/seed.js",
     "start:dev": "nodemon index.js",
-    "start": "node index.js"
+   
   },
   "keywords": [],
   "author": "",
