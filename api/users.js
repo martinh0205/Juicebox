@@ -1,9 +1,11 @@
 const express = require("express");
 const usersRouter = express.Router();
 const jwt = require("jsonwebtoken");
-const token = jwt.sign({ id: 1, username: "albert" }, process.env.JWT_SECRET, {
+const { JWT_SECRET } = process.env;
+/* const token = jwt.sign({ id: 1, username: "albert" }, process.env.JWT_SECRET, {
   expiresIn: "5h",
 });
+*/
 const {
   getUserByUsername,
   getUserById,
